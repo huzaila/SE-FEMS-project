@@ -69,7 +69,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
           error.code === 'ERR_NETWORK' ||
           error.message?.includes('Network Error') ||
           error.message?.includes('Failed to fetch')) {
-        throw new Error('Cannot connect to server. Please make sure the backend is running on port 5000.');
+        throw new Error('Cannot connect to server. Please make sure the backend is running on port 5002.');
       }
       // Check for timeout
       if (error.code === 'ECONNABORTED' || error.message?.includes('timeout')) {
