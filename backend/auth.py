@@ -113,7 +113,7 @@ def register():
             db.session.add(vendor)
 
         # create verification code for this user
-        code = generate_verification_code(16)  # 32 hex chars
+        code = generate_verification_code(5)  # 32 hex chars
         expires_at = datetime.utcnow() + timedelta(minutes=current_app.config.get("VERIFICATION_CODE_EXPIRES_MINUTES", 10))
         ev = EmailVerification(user_id=user.id, code=code, expires_at=expires_at)
         db.session.add(ev)

@@ -6,7 +6,7 @@ Tests both VENDOR and CUSTOMER flows with new test inputs
 import requests
 from datetime import datetime, timedelta
 
-BASE_URL = "http://127.0.0.1:5000"
+BASE_URL = "http://127.0.0.1:5002"
 
 # ANSI Colors
 GREEN = "\033[92m"
