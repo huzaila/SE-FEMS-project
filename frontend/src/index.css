@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* FEMS Design System - Navy & Amber with warm cream backgrounds */
+    --background: 42 100% 95%;  /* Warm cream #FFF8E7 */
+    --foreground: 210 29% 24%;  /* Navy #2C3E50 */
+
+    --card: 0 0% 100%;  /* Pure white for cards */
+    --card-foreground: 210 29% 24%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 29% 24%;
+
+    /* Navy primary */
+    --primary: 210 29% 24%;  /* Navy #2C3E50 */
+    --primary-foreground: 0 0% 100%;
+
+    /* Light secondary */
+    --secondary: 210 8% 93%;
+    --secondary-foreground: 210 29% 24%;
+
+    --muted: 210 8% 93%;
+    --muted-foreground: 184 6% 54%;  /* #7F8C8D */
+
+    /* Amber accent */
+    --accent: 38 90% 52%;  /* Amber #F39C12 */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 6 78% 57%;  /* Red #E74C3C */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 29% 24% / 0.08;
+    --input: 0 0% 90%;
+    --ring: 38 90% 52%;  /* Amber focus ring */
+
+    --radius: 0.75rem;
+
+    /* Custom FEMS tokens */
+    --success: 145 63% 42%;  /* Green #27AE60 */
+    --warning: 38 90% 52%;  /* Amber #F39C12 */
+    --info: 204 70% 53%;  /* Blue #3498DB */
+    --preparing: 282 44% 54%;  /* Purple #9B59B6 */
+    
+    /* Shadows */
+    --shadow-soft: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.07), 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-card: 0 4px 6px rgba(0, 0, 0, 0.07), 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-large: 0 12px 24px rgba(0, 0, 0, 0.15);
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 210 29% 24%;
+    --sidebar-primary: 210 29% 24%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 8% 96%;
+    --sidebar-accent-foreground: 210 29% 24%;
+    --sidebar-border: 210 29% 24% / 0.08;
+    --sidebar-ring: 38 90% 52%;
+  }
+
+  .dark {
+    --background: 210 29% 12%;
+    --foreground: 0 0% 95%;
+
+    --card: 210 29% 14%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 210 29% 14%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 210 29% 24%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 20% 18%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 210 20% 18%;
+    --muted-foreground: 184 6% 65%;
+
+    --accent: 38 90% 60%;
+    --accent-foreground: 210 29% 12%;
+
+    --destructive: 6 78% 57%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 22%;
+    --input: 210 20% 22%;
+    --ring: 38 90% 52%;
+
+    --success: 145 63% 50%;
+    --warning: 38 90% 60%;
+    --info: 204 70% 60%;
+    --preparing: 282 44% 60%;
+
+    --sidebar-background: 210 29% 14%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 210 29% 24%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 20% 20%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 210 20% 22%;
+    --sidebar-ring: 38 90% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'DM Sans', sans-serif;
+  }
+}
